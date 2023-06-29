@@ -1,0 +1,373 @@
+/*=============================================
+*     Custom CSS properties and CSS reset     *
+=============================================*/
+
+:root {
+	--heading-text: rgba(22, 37, 66, 1);
+	--text: rgba(123, 139, 173, 1);
+
+	--cta-orange: rgba(241, 103, 24, 1);
+	--cta-orange-hover: #ff9b62;
+	--button-grey: rgba(232, 239, 242, 1);
+
+	--white: #fff;
+}
+
+* {
+	font-family: "Barlow", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*=============================================
+*            Header Section                   *
+=============================================*/
+
+body {
+	/* margin: 64px 365px; */
+	width: 1110px;
+	margin: 55px auto;
+	min-height: 100vh;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 83px;
+}
+.logo {
+	width: 40px;
+}
+
+header a {
+	text-decoration: none;
+	background-color: var(--button-grey);
+	color: var(--heading-text);
+	font-weight: 700;
+	padding: 15px 20px;
+	border-radius: 8px;
+}
+
+header a:hover {
+	background-color: var(--heading-text);
+	color: var(--white);
+}
+
+/*=============================================
+*            Hero Section                   *
+=============================================*/
+.hero-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 125px;
+	margin-bottom: 50px;
+}
+
+.cta-block {
+	width: 445px;
+}
+
+.cta-block h1 {
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 900;
+	line-height: 54px;
+	margin-bottom: 27px;
+}
+
+.cta-block p {
+	line-height: 26px;
+	margin-bottom: 56px;
+	color: var(--text);
+}
+
+.cta-block a {
+	text-decoration: none;
+	background-color: var(--cta-orange);
+	padding: 15px 30px;
+	font-weight: 700;
+	color: var(--white);
+	border-radius: 8px;
+	margin-right: 67px;
+}
+
+.cta-block a:hover {
+	background-color: var(--cta-orange-hover);
+}
+
+.hero-section img {
+	width: 540px;
+	height: 480px;
+	border-radius: 20px;
+}
+
+.hero-section span {
+	font-weight: 700;
+	color: var(--text);
+}
+
+/*=============================================
+*            Middle Section                   *
+=============================================*/
+
+/* .middle-section {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 168px;
+}
+
+.middle__text {
+	padding-left: 125px;
+}
+
+.middle__text h2 {
+	text-transform: uppercase;
+	font-size: 32px;
+	color: var(--heading-text);
+	font-weight: 900;
+	line-height: 36px;
+}
+
+.middle__text p {
+	line-height: 26px;
+}
+.middle-section img {
+	height: 480px;
+	border-radius: 20px;
+} */
+
+.about {
+	width: 100%;
+	max-height: 480px;
+	display: flex;
+	margin-bottom: 168px;
+}
+
+.image-wrapper {
+	display: flex;
+	gap: 1rem;
+}
+
+#phone-keyboard {
+	width: 255px;
+	max-height: 480px;
+	overflow: hidden;
+	border-radius: 10px;
+	background: var(--cta-orange-hover);
+}
+
+#phone-keyboard img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.75;
+	mix-blend-mode: multiply;
+}
+
+#glass-keyboard {
+	border-radius: 10px;
+	overflow: hidden;
+	height: auto;
+	width: 445px;
+}
+
+#glass-keyboard img {
+	width: 100%;
+	height: 100%;
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	width: 16rem;
+	height: 20rem;
+	margin: auto;
+}
+
+.about-text h2 {
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: var(--heading-text);
+}
+
+.about-text p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	color: var(--text);
+}
+
+/*=============================================
+*            Card Section                   *
+=============================================*/
+
+.card-container {
+	display: flex;
+	gap: 30px;
+}
+
+.card-container img {
+	margin-bottom: 48px;
+}
+
+.card-container h2 {
+	text-transform: uppercase;
+	color: var(--heading-text);
+	font-weight: 900;
+	width: 255px;
+	margin-bottom: 24px;
+}
+
+.card-container p {
+	font-weight: 500;
+	line-height: 26px;
+	color: var(--text);
+}
+
+/*=============================================
+*           Footer                            *
+=============================================*/
+
+.footer-text {
+	margin-top: 128px;
+	text-align: center;
+	color: var(--text);
+}
+
+/*=============================================
+*          Media Queries - Mobile             *
+=============================================*/
+
+@media only screen and (max-width: 375px) {
+	body {
+		width: 327px;
+		margin: 27px auto;
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cta-block h1 {
+		font-size: 48px;
+	}
+
+	.hero-section {
+		flex-direction: column;
+	}
+
+	.cta-block {
+		width: 100%;
+	}
+
+	.cta_button-section a {
+		margin-right: 32px;
+	}
+
+	.hero-section {
+		gap: 64px;
+	}
+
+	.hero-section img {
+		width: 372px;
+		height: 331px;
+		left: -48px;
+		position: relative;
+	}
+
+	/* .middle-section {
+		flex-direction: column;
+	}
+
+	.middle__orange {
+		position: relative;
+		left: -48px;
+	} */
+
+	.about {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.image-wrapper {
+		display: flex;
+		margin: 0px 30px 0px 0px;
+		gap: 0;
+	}
+
+	.image-wrapper #phone-keyboard {
+		width: 200px;
+		height: 193px;
+		overflow: hidden;
+		border-radius: 10px;
+		background: var(--cta-orange-hover);
+		position: relative;
+		left: -40px;
+	}
+
+	#phone-keyboard img {
+		width: 100%;
+		height: 100%;
+		opacity: 0.75;
+		mix-blend-mode: multiply;
+	}
+
+	.image-wrapper #glass-keyboard {
+		border-radius: 10px;
+		overflow: hidden;
+		width: 100%;
+		height: 193px;
+		margin: 0rem 0rem 0rem 0rem;
+	}
+
+	#glass-keyboard img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.about-text {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+		align-items: center;
+		width: 50rem;
+	}
+
+	.about-text h2 {
+		text-align: center;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 32px;
+		line-height: 36px;
+
+		color: var(--color-dark);
+	}
+
+	.about-text p {
+		text-align: center;
+		color: var(--color-gray);
+	}
+
+	.card-container {
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.card-container h2 {
+		width: 100%;
+	}
+
+	footer {
+		margin-bottom: 50px;
+	}
+}
